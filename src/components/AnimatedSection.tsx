@@ -1,7 +1,13 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
+import { ReactNode } from "react";
 
-const AnimatedSection = ({ children, direction = "left" }) => {
-  const variants = {
+interface AnimatedSectionProps {
+  children: ReactNode;
+  direction?: "left" | "right" | "up" | "down";
+}
+
+const AnimatedSection = ({ children, direction = "left" }: AnimatedSectionProps) => {
+  const animationVariants: Variants = {
     hidden: {
       opacity: 0,
       x: direction === "left" ? -100 : direction === "right" ? 100 : 0,
@@ -19,8 +25,8 @@ const AnimatedSection = ({ children, direction = "left" }) => {
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true }}
-      variants={variants}
+      viewport={{ once: true, amount: 0.3 }}
+      variants={animationVariants}
     >
       {children}
     </motion.div>

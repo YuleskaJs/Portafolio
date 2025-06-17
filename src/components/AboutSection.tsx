@@ -1,5 +1,6 @@
 
 import { Code, Palette, Users, Award } from "lucide-react";
+import AnimatedSection from "./AnimatedSection";
 
 const AboutSection = () => {
   const skills = [
@@ -10,8 +11,10 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
+  <section id="about" className="py-20 bg-white">
+    <div className="container mx-auto px-6">
+      <AnimatedSection direction="up">
+
         {/* Título de sección */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Sobre Mí</h2>
@@ -64,6 +67,8 @@ const AboutSection = () => {
             ))}
           </div>
         </div>
+              </AnimatedSection>
+
       </div>
     </section>
   );

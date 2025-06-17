@@ -1,5 +1,6 @@
 
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import AnimatedSection from "./AnimatedSection";
 
 const ProjectsSection = () => {
   const projects = [
@@ -29,6 +30,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-20 bg-gradient-to-br from-pink-50 to-purple-50">
       <div className="container mx-auto px-6">
+        <AnimatedSection direction="up">
         {/* Título de sección */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Proyectos Destacados</h2>
@@ -95,6 +97,7 @@ const ProjectsSection = () => {
             <ArrowRight className="w-5 h-5" />
           </button>
         </div>
+        </AnimatedSection>
       </div>
     </section>
   );

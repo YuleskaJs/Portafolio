@@ -1,5 +1,6 @@
 import { ArrowRight, Download, Heart } from "lucide-react";
 import logo from '../assets/yo.jpg';
+import fotoProfesional from '../assets/foto-profesional.jpg';
 
 const HeroSection = () => {
   return (
@@ -45,7 +46,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="w-80 h-80 bg-gradient-to-br from-pink-100 to-purple-100 rounded-2xl border border-pink-200 overflow-hidden shadow-xl group">
                 <img 
-                  src="../../src/assets/Imagen de WhatsApp 2025-06-16 a las 22.23.21_79405b07.jpg" 
+                  src={fotoProfesional} 
                   alt="Foto profesional"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />

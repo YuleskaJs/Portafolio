@@ -1,112 +1,98 @@
 
-import { Heart, Star, Sparkles, ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, ArrowRight } from "lucide-react";
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Kawaii Todo App",
-      description: "A super cute task manager with Hello Kitty themes and pink sparkles! ✨",
-      image: "🎀",
+      title: "E-commerce Platform",
+      description: "Modern shopping experience with React and TypeScript, featuring responsive design and smooth animations.",
+      tech: ["React", "TypeScript", "Tailwind"],
+      image: "🛍️",
       color: "kawaii-pink"
     },
     {
-      title: "Magical Weather App", 
-      description: "Weather forecasts served with cuteness and rainbow gradients! 🌈",
-      image: "🌸",
+      title: "Task Management App", 
+      description: "Intuitive productivity tool with drag-and-drop functionality and real-time collaboration features.",
+      tech: ["React", "Node.js", "MongoDB"],
+      image: "📋",
       color: "kawaii-purple"
     },
     {
-      title: "Pastel Portfolio",
-      description: "A dreamy portfolio website with floating hearts and soft animations! 💕",
-      image: "🦄",
+      title: "Portfolio Website",
+      description: "Clean and professional portfolio showcasing design skills with beautiful animations and interactions.",
+      tech: ["React", "Framer Motion", "CSS"],
+      image: "💼",
       color: "kawaii-peach"
     }
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-br from-kawaii-lavender via-kawaii-mint to-kawaii-pink-light relative overflow-hidden">
-      {/* Floating decorations */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <Heart className="absolute top-16 left-16 w-8 h-8 text-kawaii-pink animate-float" fill="currentColor" />
-        <Star className="absolute top-32 right-16 w-6 h-6 text-kawaii-yellow animate-bounce" fill="currentColor" />
-        <Sparkles className="absolute bottom-32 left-10 w-10 h-10 text-kawaii-purple animate-float" />
-        <Heart className="absolute bottom-16 right-20 w-6 h-6 text-kawaii-peach animate-bounce" fill="currentColor" />
-        <Star className="absolute top-48 left-1/3 w-4 h-4 text-kawaii-pink animate-float" fill="currentColor" />
-        <Sparkles className="absolute bottom-48 right-1/3 w-6 h-6 text-kawaii-mint animate-bounce" />
-      </div>
-
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="projects" className="py-20 bg-gradient-to-br from-kawaii-pink-light/10 to-kawaii-lavender/10">
+      <div className="container mx-auto px-6">
         {/* Section title */}
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center space-x-4 mb-6">
-            <Sparkles className="w-8 h-8 text-kawaii-purple animate-bounce" />
-            <h2 className="font-kawaii text-5xl font-bold text-kawaii-pink-dark">My Kawaii Projects</h2>
-            <Sparkles className="w-8 h-8 text-kawaii-purple animate-bounce" />
-          </div>
-          <div className="w-24 h-2 bg-kawaii-purple rounded-full mx-auto mb-4"></div>
-          <p className="font-cute text-xl text-kawaii-pink-dark max-w-2xl mx-auto">
-            Each project is crafted with love, sprinkled with magic, and designed to bring joy! ♡
+          <h2 className="font-cute text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
+          <div className="w-20 h-1 bg-kawaii-pink rounded-full mx-auto mb-6"></div>
+          <p className="font-cute text-lg text-gray-600 max-w-2xl mx-auto">
+            A selection of my recent work showcasing different skills and technologies
           </p>
         </div>
 
         {/* Projects grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white rounded-kawaii overflow-hidden shadow-2xl border-4 border-kawaii-pink-light transform hover:scale-105 hover:-rotate-1 transition-all duration-300 group"
+              className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
             >
-              {/* Project image/emoji */}
-              <div className={`h-48 bg-gradient-to-br from-kawaii-${project.color} to-kawaii-${project.color}-light flex items-center justify-center relative overflow-hidden`}>
-                <div className="text-8xl animate-float group-hover:animate-bounce transition-all duration-300">
+              {/* Project image */}
+              <div className={`h-40 bg-gradient-to-br from-kawaii-${project.color}/20 to-kawaii-${project.color}/10 flex items-center justify-center relative overflow-hidden`}>
+                <div className="text-6xl opacity-80 group-hover:scale-110 transition-transform duration-300">
                   {project.image}
-                </div>
-                <div className="absolute top-4 right-4">
-                  <Heart className="w-6 h-6 text-white animate-pulse" fill="currentColor" />
-                </div>
-                <div className="absolute bottom-4 left-4">
-                  <Star className="w-4 h-4 text-kawaii-yellow animate-bounce" fill="currentColor" />
                 </div>
               </div>
 
               {/* Project content */}
               <div className="p-6">
-                <h3 className="font-kawaii text-2xl font-bold text-kawaii-pink-dark mb-3 flex items-center">
-                  <Star className="w-5 h-5 mr-2 text-kawaii-yellow" fill="currentColor" />
+                <h3 className="font-cute text-xl font-bold text-gray-800 mb-3">
                   {project.title}
                 </h3>
-                <p className="font-cute text-kawaii-pink-dark mb-6 leading-relaxed">
+                <p className="font-cute text-gray-600 mb-4 leading-relaxed text-sm">
                   {project.description}
                 </p>
 
+                {/* Tech stack */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.tech.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="px-3 py-1 bg-kawaii-pink/10 text-kawaii-pink-dark text-xs font-cute font-medium rounded-full"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
                 {/* Action buttons */}
-                <div className="flex space-x-3">
-                  <button className="flex-1 bg-kawaii-pink hover:bg-kawaii-pink-dark text-white font-kawaii font-semibold py-3 px-4 rounded-kawaii transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+                <div className="flex gap-3">
+                  <button className="flex-1 bg-kawaii-pink hover:bg-kawaii-pink-dark text-white font-cute font-medium py-2 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 text-sm">
                     <ExternalLink className="w-4 h-4" />
-                    <span>View Live</span>
+                    <span>Live Demo</span>
                   </button>
-                  <button className="bg-kawaii-lavender hover:bg-kawaii-purple text-kawaii-pink-dark font-kawaii font-semibold py-3 px-4 rounded-kawaii transition-all duration-300 transform hover:scale-105">
-                    <Github className="w-5 h-5" />
+                  <button className="bg-gray-100 hover:bg-gray-200 text-gray-700 font-cute font-medium py-2 px-4 rounded-lg transition-all duration-300">
+                    <Github className="w-4 h-4" />
                   </button>
                 </div>
-              </div>
-
-              {/* Floating decoration on hover */}
-              <div className="absolute -top-2 -right-2 w-8 h-8 bg-kawaii-yellow rounded-full border-2 border-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <Sparkles className="w-4 h-4 text-kawaii-purple" />
               </div>
             </div>
           ))}
         </div>
 
         {/* Call to action */}
-        <div className="text-center mt-16">
-          <button className="bg-kawaii-purple hover:bg-kawaii-pink text-white font-kawaii font-bold px-8 py-4 rounded-kawaii shadow-lg transform hover:scale-105 transition-all duration-300 border-4 border-white">
-            <div className="flex items-center space-x-3">
-              <Heart className="w-6 h-6" fill="currentColor" />
-              <span className="text-xl">View All Projects</span>
-              <Heart className="w-6 h-6" fill="currentColor" />
-            </div>
+        <div className="text-center">
+          <button className="bg-kawaii-purple hover:bg-kawaii-pink text-white font-cute font-semibold px-8 py-3 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 flex items-center space-x-2 mx-auto">
+            <span>View All Projects</span>
+            <ArrowRight className="w-5 h-5" />
           </button>
         </div>
       </div>

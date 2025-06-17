@@ -1,138 +1,158 @@
 
-import { Heart, Star, Sparkles, Mail, MessageCircle, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Linkedin, Github, Twitter } from "lucide-react";
 
 const ContactSection = () => {
-  return (
-    <section id="contact" className="py-20 bg-kawaii-cream relative overflow-hidden">
-      {/* Floating decorations */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <Heart className="absolute top-20 left-10 w-8 h-8 text-kawaii-pink animate-float" fill="currentColor" />
-        <Star className="absolute top-40 right-20 w-6 h-6 text-kawaii-yellow animate-bounce" fill="currentColor" />
-        <Sparkles className="absolute bottom-40 left-20 w-10 h-10 text-kawaii-purple animate-float" />
-        <Heart className="absolute bottom-20 right-10 w-6 h-6 text-kawaii-peach animate-bounce" fill="currentColor" />
-        <Star className="absolute top-60 left-1/2 w-4 h-4 text-kawaii-mint animate-float" fill="currentColor" />
-      </div>
+  const socialLinks = [
+    { icon: Linkedin, name: "LinkedIn", color: "kawaii-pink" },
+    { icon: Github, name: "GitHub", color: "kawaii-purple" },
+    { icon: Twitter, name: "Twitter", color: "kawaii-peach" }
+  ];
 
-      <div className="container mx-auto px-6 relative z-10">
+  return (
+    <section id="contact" className="py-20 bg-white">
+      <div className="container mx-auto px-6">
         {/* Section title */}
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center space-x-4 mb-6">
-            <Heart className="w-8 h-8 text-kawaii-pink animate-bounce" fill="currentColor" />
-            <h2 className="font-kawaii text-5xl font-bold text-kawaii-pink-dark">Let's Be Friends!</h2>
-            <Heart className="w-8 h-8 text-kawaii-pink animate-bounce" fill="currentColor" />
-          </div>
-          <div className="w-24 h-2 bg-kawaii-pink rounded-full mx-auto mb-4"></div>
-          <p className="font-cute text-xl text-kawaii-pink-dark max-w-2xl mx-auto">
-            I'd love to hear from you! Let's create something magical together! ✨
+          <h2 className="font-cute text-4xl font-bold text-gray-800 mb-4">Let's Work Together</h2>
+          <div className="w-20 h-1 bg-kawaii-pink rounded-full mx-auto mb-6"></div>
+          <p className="font-cute text-lg text-gray-600 max-w-2xl mx-auto">
+            I'm always interested in new opportunities and exciting projects
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Left side - Contact info */}
           <div className="space-y-8">
-            <div className="bg-white rounded-kawaii p-8 shadow-lg border-4 border-kawaii-pink-light">
-              <h3 className="font-kawaii text-3xl font-bold text-kawaii-pink-dark mb-6 flex items-center">
-                <Sparkles className="w-6 h-6 mr-2 text-kawaii-purple" />
-                Get In Touch ♡
+            <div className="bg-gradient-to-br from-kawaii-pink-light/20 to-kawaii-lavender/20 rounded-2xl p-8 border border-kawaii-pink-light/30">
+              <h3 className="font-cute text-2xl font-bold text-gray-800 mb-6">
+                Get In Touch
               </h3>
-              <p className="font-cute text-lg text-kawaii-pink-dark leading-relaxed mb-6">
-                Whether you want to collaborate on a kawaii project, need help with cute coding, 
-                or just want to chat about Hello Kitty - I'm always here! 🎀
+              <p className="font-cute text-gray-600 leading-relaxed mb-8">
+                I'm currently available for new projects and collaborations. 
+                Whether you have a question or just want to say hello, I'd love to hear from you!
               </p>
               
-              <div className="space-y-4">
+              <div className="space-y-6">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-kawaii-pink rounded-full flex items-center justify-center animate-bounce">
-                    <Mail className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-kawaii-pink/20 rounded-lg flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-kawaii-pink" />
                   </div>
                   <div>
-                    <h4 className="font-kawaii font-bold text-kawaii-pink-dark">Email Me</h4>
-                    <p className="font-cute text-kawaii-purple">hello@kawaiicoder.com</p>
+                    <h4 className="font-cute font-semibold text-gray-800">Email</h4>
+                    <p className="font-cute text-gray-600">hello@sarahchen.dev</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-kawaii-purple rounded-full flex items-center justify-center animate-float">
-                    <MessageCircle className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-kawaii-purple/20 rounded-lg flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-kawaii-purple" />
                   </div>
                   <div>
-                    <h4 className="font-kawaii font-bold text-kawaii-pink-dark">Let's Chat</h4>
-                    <p className="font-cute text-kawaii-purple">Always available for kawaii conversations!</p>
+                    <h4 className="font-cute font-semibold text-gray-800">Phone</h4>
+                    <p className="font-cute text-gray-600">+1 (555) 123-4567</p>
                   </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-kawaii-peach/20 rounded-lg flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-kawaii-peach" />
+                  </div>
+                  <div>
+                    <h4 className="font-cute font-semibold text-gray-800">Location</h4>
+                    <p className="font-cute text-gray-600">San Francisco, CA</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Social links */}
+              <div className="pt-8 border-t border-kawaii-pink-light/30 mt-8">
+                <h4 className="font-cute font-semibold text-gray-800 mb-4">Follow Me</h4>
+                <div className="flex space-x-4">
+                  {socialLinks.map((social, index) => (
+                    <button
+                      key={index}
+                      className={`w-10 h-10 bg-kawaii-${social.color}/20 rounded-lg flex items-center justify-center hover:scale-110 transition-transform duration-300`}
+                    >
+                      <social.icon className={`w-5 h-5 text-kawaii-${social.color}`} />
+                    </button>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
 
           {/* Right side - Contact form */}
-          <div className="bg-white rounded-kawaii p-8 shadow-lg border-4 border-kawaii-lavender">
-            <h3 className="font-kawaii text-2xl font-bold text-kawaii-pink-dark mb-6 flex items-center">
-              <Star className="w-6 h-6 mr-2 text-kawaii-yellow" fill="currentColor" />
-              Send Me a Kawaii Message!
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+            <h3 className="font-cute text-xl font-bold text-gray-800 mb-6">
+              Send a Message
             </h3>
             
             <form className="space-y-6">
-              <div>
-                <label className="block font-cute font-semibold text-kawaii-pink-dark mb-2">
-                  Your Name ♡
-                </label>
-                <input
-                  type="text"
-                  className="w-full px-4 py-3 rounded-kawaii border-4 border-kawaii-pink-light focus:border-kawaii-pink outline-none font-cute transition-all duration-300"
-                  placeholder="What should I call you?"
-                />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block font-cute font-medium text-gray-700 mb-2">
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-kawaii-pink focus:ring-1 focus:ring-kawaii-pink outline-none font-cute transition-colors duration-300"
+                    placeholder="John"
+                  />
+                </div>
+                <div>
+                  <label className="block font-cute font-medium text-gray-700 mb-2">
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-kawaii-pink focus:ring-1 focus:ring-kawaii-pink outline-none font-cute transition-colors duration-300"
+                    placeholder="Doe"
+                  />
+                </div>
               </div>
               
               <div>
-                <label className="block font-cute font-semibold text-kawaii-pink-dark mb-2">
-                  Email Address ✨
+                <label className="block font-cute font-medium text-gray-700 mb-2">
+                  Email Address
                 </label>
                 <input
                   type="email"
-                  className="w-full px-4 py-3 rounded-kawaii border-4 border-kawaii-pink-light focus:border-kawaii-pink outline-none font-cute transition-all duration-300"
-                  placeholder="your.email@kawaii.com"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-kawaii-pink focus:ring-1 focus:ring-kawaii-pink outline-none font-cute transition-colors duration-300"
+                  placeholder="john@example.com"
                 />
               </div>
               
               <div>
-                <label className="block font-cute font-semibold text-kawaii-pink-dark mb-2">
-                  Your Message 💕
+                <label className="block font-cute font-medium text-gray-700 mb-2">
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-kawaii-pink focus:ring-1 focus:ring-kawaii-pink outline-none font-cute transition-colors duration-300"
+                  placeholder="Project Inquiry"
+                />
+              </div>
+              
+              <div>
+                <label className="block font-cute font-medium text-gray-700 mb-2">
+                  Message
                 </label>
                 <textarea
                   rows={5}
-                  className="w-full px-4 py-3 rounded-kawaii border-4 border-kawaii-pink-light focus:border-kawaii-pink outline-none font-cute transition-all duration-300 resize-none"
-                  placeholder="Tell me about your kawaii project ideas..."
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-kawaii-pink focus:ring-1 focus:ring-kawaii-pink outline-none font-cute transition-colors duration-300 resize-none"
+                  placeholder="Tell me about your project..."
                 ></textarea>
               </div>
               
               <button
                 type="submit"
-                className="w-full bg-kawaii-pink hover:bg-kawaii-pink-dark text-white font-kawaii font-bold py-4 px-6 rounded-kawaii shadow-lg transform hover:scale-105 transition-all duration-300 border-4 border-white flex items-center justify-center space-x-3"
+                className="w-full bg-kawaii-pink hover:bg-kawaii-pink-dark text-white font-cute font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2"
               >
                 <Send className="w-5 h-5" />
-                <span>Send Kawaii Message</span>
-                <Heart className="w-5 h-5" fill="currentColor" />
+                <span>Send Message</span>
               </button>
             </form>
           </div>
-        </div>
-
-        {/* Decorative bottom section */}
-        <div className="text-center mt-16">
-          <div className="flex items-center justify-center space-x-6 mb-6">
-            <div className="w-16 h-16 bg-kawaii-pink rounded-full flex items-center justify-center animate-bounce border-4 border-white shadow-lg">
-              <span className="text-2xl">🎀</span>
-            </div>
-            <div className="w-20 h-20 bg-kawaii-purple rounded-full flex items-center justify-center animate-float border-4 border-white shadow-lg">
-              <span className="text-3xl">✨</span>
-            </div>
-            <div className="w-16 h-16 bg-kawaii-peach rounded-full flex items-center justify-center animate-bounce border-4 border-white shadow-lg">
-              <span className="text-2xl">💕</span>
-            </div>
-          </div>
-          <p className="font-kawaii text-2xl font-bold text-kawaii-pink-dark">
-            Thank you for visiting my kawaii world! ♡
-          </p>
         </div>
       </div>
     </section>

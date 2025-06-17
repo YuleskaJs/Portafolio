@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,12 +62,30 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Kawaii Hello Kitty colors
+				kawaii: {
+					pink: '#FFB6C1',
+					'pink-light': '#FFE4E6',
+					'pink-dark': '#FF69B4',
+					purple: '#DDA0DD',
+					lavender: '#E6E6FA',
+					mint: '#F0FFFF',
+					cream: '#FFF8DC',
+					peach: '#FFCCCB',
+					yellow: '#FFFFE0',
+					white: '#FFFFFF'
 				}
+			},
+			fontFamily: {
+				kawaii: ['Fredoka', 'cursive'],
+				cute: ['Nunito', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				sm: 'calc(var(--radius) - 4px)',
+				kawaii: '20px'
 			},
 			keyframes: {
 				'accordion-down': {
@@ -84,11 +103,35 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				bounce: {
+					'0%, 20%, 53%, 80%, 100%': {
+						transform: 'translate3d(0,0,0)'
+					},
+					'40%, 43%': {
+						transform: 'translate3d(0, -30px, 0)'
+					},
+					'70%': {
+						transform: 'translate3d(0, -15px, 0)'
+					},
+					'90%': {
+						transform: 'translate3d(0, -4px, 0)'
+					}
+				},
+				float: {
+					'0%, 100%': {
+						transform: 'translateY(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				bounce: 'bounce 2s infinite',
+				float: 'float 3s ease-in-out infinite'
 			}
 		}
 	},

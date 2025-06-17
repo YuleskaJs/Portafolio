@@ -1,5 +1,5 @@
-
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Download, Heart } from "lucide-react";
+import logo from '../assets/yo.jpg';
 
 const HeroSection = () => {
   return (
@@ -17,7 +17,7 @@ const HeroSection = () => {
             <div>
               <p className="text-pink-600 font-medium mb-4">Hola, soy</p>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
-                Sarah Chen
+                Yuleska Finol
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold text-purple-600 mb-6">
                 Desarrolladora Frontend & Diseñadora UI
@@ -25,13 +25,12 @@ const HeroSection = () => {
             </div>
 
             <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
-              Creo experiencias digitales hermosas y centradas en el usuario con atención 
-              al detalle y pasión por el diseño limpio y moderno. Construyamos algo increíble juntos.
+              Apasionada por el diseño de interfaces creativas, me encanta construir interfaces funcionales y muy bonitas :).
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="bg-pink-500 hover:bg-pink-600 text-white font-semibold px-8 py-3 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2">
-                <span>Ver Mi Trabajo</span>
+                <span>Mira mi trabajo aquí</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
               <button className="border-2 border-pink-500 text-pink-600 hover:bg-pink-500 hover:text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2">
@@ -46,16 +45,18 @@ const HeroSection = () => {
             <div className="relative">
               <div className="w-80 h-80 bg-gradient-to-br from-pink-100 to-purple-100 rounded-2xl border border-pink-200 overflow-hidden shadow-xl group">
                 <img 
-                  src="/placeholder.svg" 
+                  src="../../src/assets/Imagen de WhatsApp 2025-06-16 a las 22.23.21_79405b07.jpg" 
                   alt="Foto profesional"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-pink-500 rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-2xl text-white">✨</span>
+              {/* Cuadrito rosado en la esquina izquierda con el icono de corazón */}
+              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-pink-500 rounded-xl flex items-center justify-center shadow-lg">
+                <Heart className="w-12 h-12 text-white" />
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

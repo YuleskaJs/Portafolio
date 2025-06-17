@@ -12,7 +12,7 @@ const KawaiiHeader = () => {
               <Heart className="w-5 h-5 text-white" fill="white" />
             </div>
             <div className="font-bold text-xl text-pink-700">
-              Portfolio
+              Portafolio
             </div>
           </div>
 

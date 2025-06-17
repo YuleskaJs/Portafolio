@@ -3,77 +3,77 @@ import { Mail, Phone, MapPin, Send, Linkedin, Github, Twitter } from "lucide-rea
 
 const ContactSection = () => {
   const socialLinks = [
-    { icon: Linkedin, name: "LinkedIn", color: "kawaii-pink" },
-    { icon: Github, name: "GitHub", color: "kawaii-purple" },
-    { icon: Twitter, name: "Twitter", color: "kawaii-peach" }
+    { icon: Linkedin, name: "LinkedIn", color: "pink" },
+    { icon: Github, name: "GitHub", color: "purple" },
+    { icon: Twitter, name: "Twitter", color: "rose" }
   ];
 
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-6">
-        {/* Section title */}
+        {/* Título de sección */}
         <div className="text-center mb-16">
-          <h2 className="font-cute text-4xl font-bold text-gray-800 mb-4">Let's Work Together</h2>
-          <div className="w-20 h-1 bg-kawaii-pink rounded-full mx-auto mb-6"></div>
-          <p className="font-cute text-lg text-gray-600 max-w-2xl mx-auto">
-            I'm always interested in new opportunities and exciting projects
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">Trabajemos Juntos</h2>
+          <div className="w-20 h-1 bg-pink-500 rounded-full mx-auto mb-6"></div>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Siempre estoy interesada en nuevas oportunidades y proyectos emocionantes
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Left side - Contact info */}
+          {/* Lado izquierdo - Información de contacto */}
           <div className="space-y-8">
-            <div className="bg-gradient-to-br from-kawaii-pink-light/20 to-kawaii-lavender/20 rounded-2xl p-8 border border-kawaii-pink-light/30">
-              <h3 className="font-cute text-2xl font-bold text-gray-800 mb-6">
-                Get In Touch
+            <div className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl p-8 border border-pink-100">
+              <h3 className="text-2xl font-bold text-gray-800 mb-6">
+                Ponte en Contacto
               </h3>
-              <p className="font-cute text-gray-600 leading-relaxed mb-8">
-                I'm currently available for new projects and collaborations. 
-                Whether you have a question or just want to say hello, I'd love to hear from you!
+              <p className="text-gray-600 leading-relaxed mb-8">
+                Actualmente estoy disponible para nuevos proyectos y colaboraciones. 
+                ¡Ya sea que tengas una pregunta o solo quieras saludar, me encantaría saber de ti!
               </p>
               
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-kawaii-pink/20 rounded-lg flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-kawaii-pink" />
+                  <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-pink-600" />
                   </div>
                   <div>
-                    <h4 className="font-cute font-semibold text-gray-800">Email</h4>
-                    <p className="font-cute text-gray-600">hello@sarahchen.dev</p>
+                    <h4 className="font-semibold text-gray-800">Email</h4>
+                    <p className="text-gray-600">hola@sarahchen.dev</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-kawaii-purple/20 rounded-lg flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-kawaii-purple" />
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-purple-600" />
                   </div>
                   <div>
-                    <h4 className="font-cute font-semibold text-gray-800">Phone</h4>
-                    <p className="font-cute text-gray-600">+1 (555) 123-4567</p>
+                    <h4 className="font-semibold text-gray-800">Teléfono</h4>
+                    <p className="text-gray-600">+1 (555) 123-4567</p>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-kawaii-peach/20 rounded-lg flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-kawaii-peach" />
+                  <div className="w-12 h-12 bg-rose-100 rounded-lg flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-rose-600" />
                   </div>
                   <div>
-                    <h4 className="font-cute font-semibold text-gray-800">Location</h4>
-                    <p className="font-cute text-gray-600">San Francisco, CA</p>
+                    <h4 className="font-semibold text-gray-800">Ubicación</h4>
+                    <p className="text-gray-600">San Francisco, CA</p>
                   </div>
                 </div>
               </div>
 
-              {/* Social links */}
-              <div className="pt-8 border-t border-kawaii-pink-light/30 mt-8">
-                <h4 className="font-cute font-semibold text-gray-800 mb-4">Follow Me</h4>
+              {/* Enlaces sociales */}
+              <div className="pt-8 border-t border-pink-100 mt-8">
+                <h4 className="font-semibold text-gray-800 mb-4">Sígueme</h4>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => (
                     <button
                       key={index}
-                      className={`w-10 h-10 bg-kawaii-${social.color}/20 rounded-lg flex items-center justify-center hover:scale-110 transition-transform duration-300`}
+                      className={`w-10 h-10 bg-${social.color}-100 rounded-lg flex items-center justify-center hover:scale-110 transition-transform duration-300`}
                     >
-                      <social.icon className={`w-5 h-5 text-kawaii-${social.color}`} />
+                      <social.icon className={`w-5 h-5 text-${social.color}-600`} />
                     </button>
                   ))}
                 </div>
@@ -81,75 +81,75 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Right side - Contact form */}
+          {/* Lado derecho - Formulario de contacto */}
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-            <h3 className="font-cute text-xl font-bold text-gray-800 mb-6">
-              Send a Message
+            <h3 className="text-xl font-bold text-gray-800 mb-6">
+              Enviar Mensaje
             </h3>
             
             <form className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block font-cute font-medium text-gray-700 mb-2">
-                    First Name
+                  <label className="block font-medium text-gray-700 mb-2">
+                    Nombre
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-kawaii-pink focus:ring-1 focus:ring-kawaii-pink outline-none font-cute transition-colors duration-300"
-                    placeholder="John"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-pink-500 focus:ring-1 focus:ring-pink-500 outline-none transition-colors duration-300"
+                    placeholder="Juan"
                   />
                 </div>
                 <div>
-                  <label className="block font-cute font-medium text-gray-700 mb-2">
-                    Last Name
+                  <label className="block font-medium text-gray-700 mb-2">
+                    Apellido
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-kawaii-pink focus:ring-1 focus:ring-kawaii-pink outline-none font-cute transition-colors duration-300"
-                    placeholder="Doe"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-pink-500 focus:ring-1 focus:ring-pink-500 outline-none transition-colors duration-300"
+                    placeholder="Pérez"
                   />
                 </div>
               </div>
               
               <div>
-                <label className="block font-cute font-medium text-gray-700 mb-2">
-                  Email Address
+                <label className="block font-medium text-gray-700 mb-2">
+                  Correo Electrónico
                 </label>
                 <input
                   type="email"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-kawaii-pink focus:ring-1 focus:ring-kawaii-pink outline-none font-cute transition-colors duration-300"
-                  placeholder="john@example.com"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-pink-500 focus:ring-1 focus:ring-pink-500 outline-none transition-colors duration-300"
+                  placeholder="juan@ejemplo.com"
                 />
               </div>
               
               <div>
-                <label className="block font-cute font-medium text-gray-700 mb-2">
-                  Subject
+                <label className="block font-medium text-gray-700 mb-2">
+                  Asunto
                 </label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-kawaii-pink focus:ring-1 focus:ring-kawaii-pink outline-none font-cute transition-colors duration-300"
-                  placeholder="Project Inquiry"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-pink-500 focus:ring-1 focus:ring-pink-500 outline-none transition-colors duration-300"
+                  placeholder="Consulta sobre Proyecto"
                 />
               </div>
               
               <div>
-                <label className="block font-cute font-medium text-gray-700 mb-2">
-                  Message
+                <label className="block font-medium text-gray-700 mb-2">
+                  Mensaje
                 </label>
                 <textarea
                   rows={5}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-kawaii-pink focus:ring-1 focus:ring-kawaii-pink outline-none font-cute transition-colors duration-300 resize-none"
-                  placeholder="Tell me about your project..."
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-pink-500 focus:ring-1 focus:ring-pink-500 outline-none transition-colors duration-300 resize-none"
+                  placeholder="Cuéntame sobre tu proyecto..."
                 ></textarea>
               </div>
               
               <button
                 type="submit"
-                className="w-full bg-kawaii-pink hover:bg-kawaii-pink-dark text-white font-cute font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2"
+                className="w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2"
               >
                 <Send className="w-5 h-5" />
-                <span>Send Message</span>
+                <span>Enviar Mensaje</span>
               </button>
             </form>
           </div>

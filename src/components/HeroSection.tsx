@@ -21,7 +21,7 @@ const HeroSection = () => {
                 Yuleska Finol
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold text-purple-600 mb-6">
-                Desarrolladora Frontend & Diseñadora UI
+                Desarrolladora Frontend & 
               </h2>
             </div>
 

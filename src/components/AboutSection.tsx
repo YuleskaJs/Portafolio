@@ -4,7 +4,7 @@ import { Code, Palette, Users, Award } from "lucide-react";
 const AboutSection = () => {
   const skills = [
     { icon: Code, name: "Desarrollo", description: "React.js, JavaScript (ES6+), Node.js, HTML5, CSS3, MongoDB, MySQL, Google Apps Script", color: "pink" },
-    { icon: Palette, name: "Diseño", description: "Diseño responsivo enfocado en experiencia de usuario (UX), maquetación moderna con Semantic UI y Tailwind, creación de prototipos interactivos en Figma, diseño de interfaces atractivas (UI), y enfoque en accesibilidad y usabilidad", color: "purple" },
+    { icon: Palette, name: "Diseño", description: "Diseño responsivo enfocado en experiencia de usuario (UX), maquetación moderna con Semantic UI y Tailwind, diseño de interfaces atractivas (UI), y enfoque en accesibilidad y usabilidad", color: "purple" },
     { icon: Users, name: "Colaboración", description: "Trabajo en equipo, Comunicación efectiva, Gestión de proyectos, Metodologías ágiles", color: "rose" },
     { icon: Award, name: "Calidad", description: "Buenas prácticas de código, Validación de formularios, Automatización de procesos, Testing básico", color: "indigo" }
   ];

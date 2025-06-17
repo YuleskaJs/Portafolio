@@ -1,7 +1,7 @@
 import { ArrowRight, Download, Heart } from "lucide-react";
 import logo from '../assets/yo.jpg';
 import fotoProfesional from '../assets/foto-profesional.jpg';
-
+import AnimatedSection from './AnimatedSection';
 const HeroSection = () => {
   return (
     <section className="min-h-screen bg-gradient-to-br from-white via-pink-50 to-purple-50 relative overflow-hidden pt-20">
@@ -14,10 +14,12 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Lado izquierdo - Contenido */}
-          <div className="space-y-8">
-            <div>
-              <p className="text-pink-600 font-medium mb-4">Hola, soy</p>
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
+            <AnimatedSection direction="left">
+              <div className="space-y-8">
+                <div>
+                  <p className="text-pink-600 font-medium mb-4">Hola, soy</p>
+                  <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900">
+
                 Yuleska Finol
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold text-purple-600 mb-6">
@@ -40,7 +42,7 @@ const HeroSection = () => {
               </button>
             </div>
           </div>
-
+          </AnimatedSection>
           {/* Lado derecho - Imagen profesional */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">

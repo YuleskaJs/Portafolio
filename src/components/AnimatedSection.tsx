@@ -1,5 +1,6 @@
-import { motion, Variants } from "framer-motion";
-import { ReactNode } from "react";
+import { motion, useAnimation, Variants } from "framer-motion";
+import { ReactNode, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 interface AnimatedSectionProps {
   children: ReactNode;
@@ -7,6 +8,12 @@ interface AnimatedSectionProps {
 }
 
 const AnimatedSection = ({ children, direction = "left" }: AnimatedSectionProps) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: false, // ← para que se repita
+    threshold: 0.3,     // ← % visible para disparar
+  });
+
   const animationVariants: Variants = {
     hidden: {
       opacity: 0,
@@ -17,15 +24,23 @@ const AnimatedSection = ({ children, direction = "left" }: AnimatedSectionProps)
       opacity: 1,
       x: 0,
       y: 0,
-      transition: { duration: 0.7, ease: "easeOut" },
+      transition: { duration: 0.6, ease: "easeOut" },
     },
   };
 
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [inView, controls]);
+
   return (
     <motion.div
+      ref={ref}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      animate={controls}
       variants={animationVariants}
     >
       {children}
